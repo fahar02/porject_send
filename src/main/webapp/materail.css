@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in the width/height calculation */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.boxBody {
+    height: 1000px;
+    width: 100%;
+    background-image: url('./images/travel.jpg');
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 200px); /* Two equal rows */
+    gap: 70px;
+    padding: 20px; /* Ensure there's space inside the container */
+}
+
+.boxBody .Box {
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px;
+    border-radius: 5%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.boxBody .material,
+.boxBody .duration,
+.boxBody .consuption,
+.boxBody .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure these boxes fill up the grid cells */
+}
+
+.boxBody .save {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    margin: 10px;
+    width: 100%; /* Make inputs and selects fill their containers */
+    max-width: 300px; /* Limit the maximum width for better alignment */
+}
+
+.boxBody .BoxButton {
+    position: relative;
+    left: 300px;
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px;
+    border-radius: 5%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Query to improve layout on smaller screens */
+@media (max-width: 768px) {
+    .boxBody {
+        grid-template-columns: 1fr; /* Stack the form sections on small screens */
+        grid-template-rows: auto; /* Allow rows to adjust */
+    }
+
+    .boxBody .Box {
+        width: 100%; /* Full width on small screens */
+    }
+}

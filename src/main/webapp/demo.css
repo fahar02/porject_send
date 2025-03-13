@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+*
+{
+	padding: 0px;
+	margin:0px;
+}
+.header{
+	height: 100px;
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .headerLogo{
+	height: 100px;
+	width: 300px;
+	font-size: 30px;
+	display:flex;
+	align-items: center;
+}
+.header .headerLogo .logo
+{
+	height: 100%;
+	width:120px;
+}
+.header .headerList{
+	height: 100px;
+	width: 800px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	justify-content:space-evenly;
+	font-size: 30px;
+	background-color: greenyellow;
+}
+.header .headerSearch{
+	height: 100px;
+	width:300px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,133 @@
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in the width/height calculation */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.boxBody {
+    height: 1000px;
+    width: 100%;
+    background-image: url('./images/travel.jpg');
+    background-size: cover; /* Ensure the background covers the full area */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 200px); /* Two equal rows */
+    gap: 70px;
+    padding: 20px;
+}
+
+/* Container for individual Box sections */
+.boxBody .Box {
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px;
+    border-radius: 5%;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Specific layout for Home Appliance Box */
+.boxBody .applience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make the section fill the available space */
+}
+
+.boxBody .applience select {
+    width: 100%;
+    max-width: 300px; /* Limit the maximum width */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.boxBody .applience h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Duration and Consumption section */
+.boxBody .duration,
+.boxBody .consuption,
+.boxBody .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Save section */
+.boxBody .save {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Form elements styles */
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+    width: 100%; /* Ensure they fill up the container */
+    max-width: 300px; /* Prevent inputs from being too wide */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boxBody .BoxButton {
+    position: relative;
+    left: 300px;
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px;
+    border-radius: 5%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .boxBody {
+        grid-template-columns: 1fr; /* Stack form sections on small screens */
+        grid-template-rows: auto; /* Allow rows to adjust dynamically */
+    }
+
+    .boxBody .Box {
+        width: 100%; /* Full width on smaller screens */
+        max-width: none;
+    }
+
+    .boxBody .save {
+        position: relative;
+        left: 0; /* Remove left positioning on small screens */
+    }
+}

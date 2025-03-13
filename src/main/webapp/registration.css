@@ -1,0 +1,35 @@
+*
+{
+	padding: 0px;
+	margin:0px;
+}
+.contain
+{
+	height: 600px;
+	width:100%;
+	background-image:url('./images/login.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+    background-color: antiquewhite;
+	
+}
+.forms
+{
+	height:500px;
+	width: 500px;
+	 background-color: rgba(255, 255, 255, 0.8);
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+     display:flex;
+	flex-direction: column;           
+}
+.forms .text{
+	height: 50px;
+	width: 350px;
+	font-size: 25px;
+	
+}

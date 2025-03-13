@@ -1,0 +1,77 @@
+.homeContainer{
+	
+	height:300px;
+	width: 100%;
+	background-color: gainsboro;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+.btn1{
+    height: 100px;
+    width: 200px;
+    position: relative;
+    right:30px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.6s;
+    color: green;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 5px;
+    font-family: roboto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    
+    
+
+}
+.btn2{
+    height: 100px;
+    width: 200px;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.6s;
+    color: green;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 5px;
+    font-family: roboto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+
+}
+.btn3{
+    height: 100px;
+    width: 250px;
+    position: relative;
+    left: 30px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.6s;
+    color: green;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px 5px;
+    font-family: roboto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+
+}
+.btn1:hover {
+    background-color: greenyellow;
+        text-decoration: none;
+}
+.btn2:hover {
+    background-color: greenyellow;
+        text-decoration: none;
+}
+.btn3:hover {
+    background-color: greenyellow;
+        text-decoration: none;
+}

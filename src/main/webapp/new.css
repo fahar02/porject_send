@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /* Remove the default margin of the body */
+}
+
+.container {
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; /* Remove the top padding */
+    position: relative;
+    right:120px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.menu-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.menu-area ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure items are aligned horizontally */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; /* Ensure items don't wrap */
+}
+
+
+.menu-area li {
+    flex: 1 1 auto; /* All li items take equal space */
+    text-align: center; /* Center the text inside each li */
+    padding: 10px 0;
+}
+
+.menu-area a {
+    display: inline-block;
+    text-align: center;
+    transition: 0.6s;
+    color: green;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: white;
+    padding: 20px 5px;
+    font-family: roboto;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.menu-area li a:hover {
+    color:white;
+    background-color: green;
+    text-decoration: none;
+}
+
+.menu-area .btn {
+    position: relative;
+    left:20px;
+    flex: 1;
+    text-align: center;
+    padding: 15px 20px;
+    border: none;
+}
+
+.dropbtn {
+    background-color: whitesmoke;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.m {
+    width: 35px;
+    height: 5px;
+    background-color: green;
+    margin: 6px 0;
+}
+
+.dropbtn:hover {
+    background-color: greenyellow;
+        text-decoration: none;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .link {
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-area ul {
+        flex-wrap: wrap;
+    }
+    .menu-area li {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu-area li {
+        flex-basis: 100%;
+    }
+}
