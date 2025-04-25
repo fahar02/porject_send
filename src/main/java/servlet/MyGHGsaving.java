@@ -38,7 +38,8 @@ public class MyGHGsaving extends HttpServlet
 	     System.out.println(distance+" "+travelby+" "+insteadof+" "+recordDate+" "+note);
 	     Travel travel=new Travel();
 	     UserManagement userManagement=new UserManagement();
-	     User u=userManagement.fingUserId(user.getUserId());
+	     System.out.println(user);
+	     //User u=userManagement.fingUserId(user.getUserId());
 	     travel.setName("travel");
 	     travel.setDistance(distance);
 	     travel.setInsteadMode(insteadof);
@@ -46,7 +47,8 @@ public class MyGHGsaving extends HttpServlet
 	     travel.setNote(note);
 	     travel.setUser(user);
 	     travel.setReduce(userManagement.calTravel(insteadof,travelby,distance));
-	     Travel t=userManagement.saveTravle(u, travel);
+	     System.out.println(travel.getReduce());
+	     Travel t=userManagement.saveTravle(user, travel);
 	     if(t!=null)
 	     {
 	    	  req.setAttribute("user",user);

@@ -2,6 +2,8 @@ package dao;
 
 import java.util.HashMap;
 
+
+
 import java.util.List;
 import java.util.ListIterator;
 
@@ -132,28 +134,7 @@ public class UserManagement {
 		}
 		return null;
 	}
-	public double calMaterail(String s1,double a)
-	{
-		HashMap<String, Double> materialEmissionsMap = new HashMap<>();
-
-        // Adding some sample data (material and its CO2 emission per kg)
-        materialEmissionsMap.put("Steel", 1900.0);  // 1900 grams of CO2 per kg for Steel
-        materialEmissionsMap.put("Stainless Steel", 2200.0);  // 2200 grams of CO2 per kg for Stainless Steel
-        materialEmissionsMap.put("Aluminium", 8700.0); // 8700 grams of CO2 per kg for Aluminium
-        materialEmissionsMap.put("Copper", 4000.0);   // 4000 grams of CO2 per kg for Copper
-        materialEmissionsMap.put("Plastic", 6000.0);  // 6000 grams of CO2 per kg for Plastic
-        materialEmissionsMap.put("Ceramics", 500.0);  // 500 grams of CO2 per kg for Ceramics
-        materialEmissionsMap.put("Glass", 500.0);     // 500 grams of CO2 per kg for Glass
-        materialEmissionsMap.put("Paper", 1200.0);    // 1200 grams of CO2 per kg for Paper
-        double d=materialEmissionsMap.get(s1);
-        double result=(d*a)/1000;
-        if(result <0)
-        {
-        	return 0;
-        }
-        return result;
-
-	}
+	
 	public  double calTravel(String s1,String s2,double distance)
 	{
 		 HashMap<String, Double> map= new HashMap<>();
@@ -166,33 +147,16 @@ public class UserManagement {
 	        map.put("Flight", 250.0);
 	        map.put("Walking", 0.0);// 250 grams of CO2 per km
 	        map.put("Bike", 20.0);
-	        double d1=map.get(s1);
-	        double d2=map.get(s2);
-	        double result=Math.round(d1-d2)/1000;
-	        if(result <0)
+	        double d1=map.get(s1)*distance;
+	        double d2=map.get(s2)*distance;
+	        double result=(d1-d2)/1000;
+	        System.out.println(result+" "+d1+" "+d2);
+	        if(result !=0)
 	        {
-	        	return 0;
+	        	return result;
 	        }
-	       return result;
+	       return 0;
 	}
-	public double calHome(String s1,double a)
-	{
-		HashMap<String, Double> co2EmissionsMap = new HashMap<>();
-
-        // Adding some sample data (device and its CO2 emission per hour in grams)
-        co2EmissionsMap.put("Heater", 1500.0);  // 1500 grams of CO2 per hour for Heater
-        co2EmissionsMap.put("AC", 2000.0);      // 2000 grams of CO2 per hour for AC
-        co2EmissionsMap.put("Water", 800.0);    // 800 grams of CO2 per hour for Water Heater
-        co2EmissionsMap.put("Light", 30.0);     // 30 grams of CO2 per hour for Light (for energy consumption)
-        co2EmissionsMap.put("Other Electronic Device", 100.0);  // 100 grams of CO2 per hour for other electronics
-		double d=co2EmissionsMap.get(s1);
-		double result=Math.round(d*a)/1000;
-		if(result <0)
-        {
-        	return 0;
-        }
-       
-        return result;
-	}
+	
 
 }

@@ -41,7 +41,6 @@ public class MyHomeSaving extends HttpServlet
 	     home.setEmition(consumption);
 	     home.setNote(note);
 	     home.setUser(user);
-	     home.setEmition(userManagement.calHome(applience,duration));
 	     System.out.println(applience+" "+duration+" "+consumption+" "+recordDate+" "+note);
 		 Home h=userManagement.saveHome(user,home);
 		

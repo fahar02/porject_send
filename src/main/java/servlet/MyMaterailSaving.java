@@ -40,9 +40,7 @@ public class MyMaterailSaving extends HttpServlet
 	     material.setEmition(consumption);
 	     material.setNote(note);
 	     material.setUser(user);
-	     material.setEmition(userManagement.calMaterail(materials,consumption));
 	     System.out.println(materials+" "+duration+" "+consumption+" "+recordDate+" "+note);
-	     
 	     Material m=userManagement.saveMaterail(user, material);
 	    
 	     if(m!=null)

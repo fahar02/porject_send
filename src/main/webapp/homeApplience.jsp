@@ -17,7 +17,7 @@
                 <div class="contain">
                     <h3>Home</h3>
                     <label>Home Appliance</label>
-                    <select name="homeAppliance" required>
+                    <select id="homeAppliance" name="homeAppliance" required>
                         <option value="">List of Devices</option>
                         <option value="Heater">Heater</option>
                         <option value="AC">AC</option>
@@ -41,9 +41,9 @@
             <!-- Consumption per Unit -->
             <div class="Box consuption">
                 <div class="contain">
-                    <h3>Consumption</h3>
-                    <label for="consumption">Consumption per unit (kWh):</label>
-                    <input type="number" id="consumption" name="consumption" placeholder="100 gram/hour" value="100">
+                    <h3>Consumption per unit (kWh):</h3>
+                      <button type="button" onclick="cal()">calculate</button>
+                    <input type="number" id="input3" name="consumption" >
                 </div>
             </div>
     
@@ -61,6 +61,7 @@
             </div>
         </div>
     </form>
+    <script src="homecal.js"></script>
 <%@include file="footer.jsp" %>
 <%@include file="all.jsp" %>
 </body>

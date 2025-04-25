@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="materail.css">
+<link >
 <%@include file="all.jsp" %>
 <title>Insert title here</title>
 </head>
@@ -40,12 +41,12 @@
                 </div>
             </div>
     
-            <!-- Consumption -->
+             <!-- Consumption -->
             <div class="Box consuption">
                 <div class="contain">
-                    <h3>Consumption</h3>
-                    <label for="consumption">Consumption per unit:</label>
-                    <input type="number" id="consumption" name="consumption" required>
+                    <h3>Consumption per unit:</h3>
+                    <button type="button" onclick="cal()">calculate</button>
+                    <input name="consumption" id="input3">
                 </div>
             </div>
     
@@ -63,6 +64,7 @@
             </div>
         </div>
     </form>
+   <script src="materailcal.js"></script>
 <%@include file="footer.jsp" %>
 <%@include file="all.jsp" %>
 </body>
